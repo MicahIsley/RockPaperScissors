@@ -1,0 +1,71 @@
+<!DOCTYPEhtml>
+<html>
+	<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h2>Choose a player</h2>
+					<button id="player1">Player 1</button>
+					<button id="player2">Player 2</button>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div id="player1Display">
+						<h3>Player 1</h3>	
+							<button class="player1Button" id="rock">Rock</button>
+							<button class="player1Button" id="paper">Paper</button>
+							<button class="player1Button" id="scissors">Scissors</button>
+							<button class="ready">Ready</button>
+							<form>
+							  <div class="form-group">
+							    <label for="chat">Chat</label>
+							    <input type="chatBox" class="form-control" id="p1ChatBox" placeholder="Chat">
+							  </div>
+							  <button id="submit1">Submit</button>
+							 </form> 
+					</div>
+				</div>
+				<div class="col-sm-4" id="results">
+					<div id="p1Victory">Player 1 Wins!</div>
+					<div id="p2Victory">Player 2 Wins!</div>
+					<div id="tie">Tie...</div>
+				</div>
+
+				<div class="col-sm-4">	
+					<div id="player2Display">
+						<h3>Player 2</h3>
+							<button class="player2Button" id="rock">Rock</button>
+							<button class="player2Button" id="paper">Paper</button>
+							<button class="player2Button" id="scissors">Scissors</button>
+							<button class="ready">Ready</button>
+							<form>
+							  <div class="form-group">
+							    <label for="chat">Chat</label>
+							    <input type="chatBox" class="form-control" id="p2ChatBox" placeholder="Chat">
+							  </div>
+							  <button id="submit2">Submit</button>
+							</form>  
+					</div>		
+				</div>	
+			<div id="stats">
+				<h3>Player 1 Wins: </h3> <span id="p1Wins"></span>
+				<h3>Player 2 Wins: </h3> <span id="p2Wins"></span>
+				<h3>Ties: </h3> <span id="ties"></span>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div id="p1Messages"></div>
+				</div>	
+				<div class="col-sm-6">	
+					<div id="p2Messages"></div>
+				</div>
+			</div>		
+		</div>	
+	</body>
+</html>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script type="text/javascript" src="assets/javascript/logic.js" ></script>	

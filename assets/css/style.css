@@ -1,0 +1,55 @@
+#player1Display {
+	background: blue;
+	float: left;
+	position: absolute;
+	z-index: 0;
+	display: none;
+}
+
+#player2Display {
+	background: green;
+	position: absolute;
+	float: left;
+	z-index: 1;
+	display: none;
+}
+
+#stats {
+	margin-top: 200px;
+
+}
+
+#p1Victory {
+	position: absolute;
+	z-index: 0;
+	display: none;
+	background: lightblue;
+	float: left;
+	height: 150px;
+	width: 150px;
+}
+
+#p2Victory {
+	position: absolute;
+	z-index: 1;
+	display: none;
+	background: lightgreen;
+	float: left;
+	height: 150px;
+	width: 150px;
+}
+
+#tie {
+	position: absolute;
+	z-index: 2;
+	display: none;
+	background: yellow;
+	float: left;
+	height: 150px;
+	width: 150px;
+}
+
+
+
+
+
