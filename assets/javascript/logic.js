@@ -72,14 +72,14 @@ $("#ready1").on("click", function() {
 	database.ref().update({
 		player1: true
 	})
-	$("#p1ButtonArea").css("border-color", "green",);
+	$("#p1ButtonArea").css("border-color", "green");
 })
 
 $("#ready2").on("click", function() {
 	database.ref().update({
 		player2: true
 	})
-	$("#p2ButtonArea").css("border-color", "green",);
+	$("#p2ButtonArea").css("border-color", "green");
 })
 
 $("#player1").on("click", function() {
@@ -163,8 +163,8 @@ function determineWinner(){
 			$("#tie").hide();
 			$("#gameWords").empty();
 			$("img").hide();
-			$("#p1ButtonArea").css("border-color", "black",);
-			$("#p2ButtonArea").css("border-color", "black",);
+			$("#p1ButtonArea").css("border-color", "black");
+			$("#p2ButtonArea").css("border-color", "black");
 		}, 2000);
 	} else{}
 	})
