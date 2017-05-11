@@ -46,13 +46,13 @@ $("#player1").on("click", function() {
 	//console.log("player1");
 	$("#player2Display").hide();
 	$("#player1Display").show();
-	//$("#playerSelection").empty();
+	$("#playerSelection").empty();
 });
 $("#player2").on("click", function() {
 	//console.log("player2");
 	$("#player1Display").hide();
 	$("#player2Display").show();
-	//$("#playerSelection").empty();
+	$("#playerSelection").empty();
 });	
 //compare player responses and determine win, loss, or tie
 function compareResponses() {
