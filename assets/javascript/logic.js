@@ -129,10 +129,6 @@ $("#submit1").on("click", function(event) {
 	database.ref().update({
 		p1Chat: p1Chat
 	})
-	database.ref().on("value", function(snapshot) {
-		player1Message = snapshot.val().p1Chat;
-		$("#p1Messages").text(player1Message);
-	});	
 });	
 
 $("#submit2").on("click", function(event) {
@@ -143,11 +139,14 @@ $("#submit2").on("click", function(event) {
 	database.ref().update({
 		p2Chat: p2Chat
 	})
-	database.ref().on("value", function(snapshot) {
-		player2Message = snapshot.val().p2Chat;
-		$("#p2Messages").text(player2Message);
-	});	
 });	
+
+database.ref().on("value", function(snapshot) {
+		player1Message = snapshot.val().p1Chat;
+		player2Message = snapshot.val().p2Chat;
+		$("#p1Messages").text(player1Message);
+		$("#p2Messages").text(player2Message);
+	})
 
 //display victories and ties
 function displayStats() {
