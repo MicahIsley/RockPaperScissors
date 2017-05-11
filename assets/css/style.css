@@ -49,6 +49,15 @@
 	width: 150px;
 }
 
+.messageBox {
+	background: lightgrey;
+	height: 300px;
+}
+
+.gameStats {
+	float: left;
+	margin: 10px;
+}
 
 
 
