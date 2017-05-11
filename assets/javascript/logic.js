@@ -38,18 +38,48 @@ $(".player2Button").on("click", function() {
 	})
 });	
 
+$("#rock").on("click", function(){
+	$("img").hide();
+	$("#rockPic1").show();
+})
+
+$("#paper").on("click", function(){
+	$("img").hide();
+	$("#paperPic1").show();
+})
+
+$("#scissors").on("click", function(){
+	$("img").hide();
+	$("#scissorsPic1").show();
+})
+
+$("#rock2").on("click", function(){
+	$("img").hide();
+	$("#rockPic1").show();
+})
+
+$("#paper2").on("click", function(){
+	$("img").hide();
+	$("#paperPic1").show();
+})
+
+$("#scissors2").on("click", function(){
+	$("img").hide();
+	$("#scissorsPic1").show();
+})
+
 $("#ready1").on("click", function() {
 	database.ref().update({
 		player1: true
 	})
-	ready();
+	$("#p1ButtonArea").css("border-color", "green",);
 })
 
 $("#ready2").on("click", function() {
 	database.ref().update({
 		player2: true
 	})
-	ready();
+	$("#p2ButtonArea").css("border-color", "green",);
 })
 
 $("#player1").on("click", function() {
@@ -75,34 +105,40 @@ function compareResponses() {
 }	
 
 function determineWinner(){
-	if(player1Response=="rock" && player2Response=="scissors"){
+	if(player1Response=="rock" && player2Response=="scissors2"){
 		console.log("P1 Wins!");
 		p1Wins++;
 		$("#p1Victory").show();
-	} else if(player1Response=="paper" && player2Response=="rock"){
+		$("#gameWords").text("Rock beats Scissors");
+	} else if(player1Response=="paper" && player2Response=="rock2"){
 		console.log("P1 Wins!");
 		p1Wins++;
 		$("#p1Victory").show();
-	} else if(player1Response=="scissors" && player2Response=="paper"){
+		$("#gameWords").text("Paper beats Rock");
+	} else if(player1Response=="scissors" && player2Response=="paper2"){
 		console.log("P1 Wins!");
 		p1Wins++;
 		$("#p1Victory").show();
-	} else if(player1Response == player2Response){
+		$("#gameWords").text("Scissors beats Paper");
+	} else if(((player1Response)+2) == player2Response){
 		console.log("tie");
 		ties++;
 		$("#tie").show();
-	} else if(player2Response=="rock" && player1Response=="scissors"){
+	} else if(player2Response=="rock2" && player1Response=="scissors"){
 		console.log("P2 Wins!");
 		p2Wins++;
 		$("#p2Victory").show();
-	} else if(player2Response=="paper" && player1Response=="rock"){
+		$("#gameWords").text("Rock beats Scissors");
+	} else if(player2Response=="paper2" && player1Response=="rock"){
 		console.log("P2 Wins!");
 		p2Wins++;
 		$("#p2Victory").show();
-	} else if(player2Response=="scissors" && player1Response=="paper"){
+		$("#gameWords").text("Paper beats Rock");
+	} else if(player2Response=="scissors2" && player1Response=="paper"){
 		console.log("P2 Wins!");
 		p2Wins++;
 		$("#p2Victory").show();
+		$("#gameWords").text("Scissors beats Paper");
 	} else{}	
 }	
 
@@ -125,6 +161,10 @@ function determineWinner(){
 			$("#p1Victory").hide();
 			$("#p2Victory").hide();
 			$("#tie").hide();
+			$("#gameWords").empty();
+			$("img").hide();
+			$("#p1ButtonArea").css("border-color", "black",);
+			$("#p2ButtonArea").css("border-color", "black",);
 		}, 2000);
 	} else{}
 	})
@@ -165,9 +205,6 @@ function displayStats() {
 	$("#ties").html(ties);
 }
 
-$(".ready").on("click", function() {
-	ready();
-});
 
 displayStats();
 

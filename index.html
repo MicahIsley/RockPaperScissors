@@ -2,6 +2,7 @@
 <html>
 	<head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	</head>
 	<body>
@@ -15,44 +16,70 @@
 					<button id="player2">Player 2</button>
 			</div>
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-sm-5">
 					<div id="player1Display">
-						<h3>Player 1</h3>	
-							<button class="player1Button" id="rock">Rock</button>
-							<button class="player1Button" id="paper">Paper</button>
-							<button class="player1Button" id="scissors">Scissors</button>
-							<button id="ready1">Ready</button>
-							<form>
-							  <div class="form-group">
-							    <label for="chat">Chat</label>
-							    <input type="chatBox" class="form-control" id="p1ChatBox" placeholder="Chat">
-							  </div>
-							  <button id="submit1">Submit</button>
-							 </form> 
+						<div class="row">
+							<div id="p1ButtonArea">
+								<h3>Player 1</h3>	
+									<button class="player1Button" id="rock">Rock</button>
+									<button class="player1Button" id="paper">Paper</button>
+									<button class="player1Button" id="scissors">Scissors</button>
+									<button id="ready1">Ready</button>
+							</div>
+						</div>			
+						<div class="row">
+							<div id="p1ChatArea">		
+								<form>
+									<div class="form-group">
+									   <label for="chat">Chat</label>
+									   <input type="chatBox" class="form-control" id="p1ChatBox" placeholder="Chat">
+									</div>
+									  <button id="submit1">Submit</button>
+								</form> 
+							</div>
+						</div>
+					</div>	
+					<div id="player2Display">
+						<div class="row">
+							<div id="p2ButtonArea">
+								<h3>Player 2</h3>
+									<button class="player2Button" id="rock2">Rock</button>
+									<button class="player2Button" id="paper2">Paper</button>
+									<button class="player2Button" id="scissors2">Scissors</button>
+									<button id="ready2">Ready</button>
+							</div>
+						</div>			
+						<div class="row">
+							<div id="p2ChatArea">		
+								<form>
+								  <div class="form-group">
+								    <label for="chat">Chat</label>
+								    <input type="chatBox" class="form-control" id="p2ChatBox" placeholder="Chat">
+								  </div>
+								  <button id="submit2">Submit</button>
+								</form> 
+							</div>	
+						</div>
+					</div>				
+				</div>
+				<div class="col-sm-5" id="results">
+					<div class="resultsWords" id="p1Victory">Player 1 Wins!</div>
+					<div class="resultsWords" id="p2Victory">Player 2 Wins!</div>
+					<div class="resultsWords" id="tie">Tie...</div>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-sm-5">
+					<div id="p1Picture">
+						<img id="rockPic1" src="assets/images/rock.jpg" alt="Responsive image">
+						<img id="paperPic1" src="assets/images/paper.jpg" alt="Responsive image">
+						<img id="scissorsPic1" src="assets/images/scissors.jpg" alt="Responsive image">
 					</div>
 				</div>
-				<div class="col-sm-4" id="results">
-					<div id="p1Victory">Player 1 Wins!</div>
-					<div id="p2Victory">Player 2 Wins!</div>
-					<div id="tie">Tie...</div>
+				<div class="col-sm-5">
+					<div id="gameWords"></div>
 				</div>
-
-				<div class="col-sm-4">	
-					<div id="player2Display">
-						<h3>Player 2</h3>
-							<button class="player2Button" id="rock">Rock</button>
-							<button class="player2Button" id="paper">Paper</button>
-							<button class="player2Button" id="scissors">Scissors</button>
-							<button id="ready2">Ready</button>
-							<form>
-							  <div class="form-group">
-							    <label for="chat">Chat</label>
-							    <input type="chatBox" class="form-control" id="p2ChatBox" placeholder="Chat">
-							  </div>
-							  <button id="submit2">Submit</button>
-							</form>  
-					</div>		
-				</div>
+			</div>					
 			<div class="row">		
 				<div class="col-sm-12" id="stats">
 					<div class="gameStats">

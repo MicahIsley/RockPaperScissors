@@ -1,21 +1,13 @@
 #player1Display {
-	background: blue;
-	float: left;
-	position: absolute;
-	z-index: 0;
 	display: none;
 }
 
 #player2Display {
-	background: green;
-	position: absolute;
-	float: left;
-	z-index: 1;
 	display: none;
 }
 
 #stats {
-	margin-top: 200px;
+	margin-top: 120px;
 
 }
 
@@ -25,8 +17,9 @@
 	display: none;
 	background: lightblue;
 	float: left;
-	height: 150px;
-	width: 150px;
+	height: 200px;
+	width: 200px;
+	border-radius: 20px;
 }
 
 #p2Victory {
@@ -35,8 +28,9 @@
 	display: none;
 	background: lightgreen;
 	float: left;
-	height: 150px;
-	width: 150px;
+	height: 200px;
+	width: 200px;
+	border-radius: 20px;
 }
 
 #tie {
@@ -45,13 +39,16 @@
 	display: none;
 	background: yellow;
 	float: left;
-	height: 150px;
-	width: 150px;
+	height: 200px;
+	width: 200px;
+	border-radius: 20px;
 }
 
 .messageBox {
 	background: lightgrey;
-	height: 300px;
+	height: 100px;
+	font-size: 20px;
+	text-align: center;
 }
 
 .gameStats {
@@ -59,6 +56,107 @@
 	margin: 10px;
 }
 
+img {
+	height: 125px;
+	width: 125px;
+	float: left;
+	position: absolute;
+	display: none;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	margin-top: 10px;
+}
 
+h1 {
+	text-align: center;
+	font-family: 'Love Ya Like A Sister', cursive;
+}
 
+h2 {
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+
+h3 {
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+
+button {
+	border-radius: 25px;
+	background: orange;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+}
+
+button:hover {
+	background: yellow;
+}
+
+button:focus {
+	outline: 0px;
+
+}
+
+.form-control {
+	margin-top: 20px;
+	padding: 5px;
+}
+
+.form-group {
+	margin-top: 20px;
+}
+
+#p1ButtonArea {
+	background: #4848ff;
+	border-radius: 20px;
+	border-width: 3px;
+	border-color: black;
+	border-style: solid;
+	height: 100px;
+	text-align: center;
+}
+
+#p1ChatArea {
+	background: #b548b5;
+	border-radius: 20px;
+	height: 150px;
+	text-align: center;
+}
+
+#p2ButtonArea {
+	background: #2be22b;
+	border-radius: 20px;
+	border-width: 3px;
+	border-color: black;
+	border-style: solid;
+	height: 100px;
+	text-align: center;
+}
+
+#p2ChatArea {
+	background: #cc2828;
+	border-radius: 20px;
+	height: 150px;
+	text-align: center;
+}
+
+.resultsWords {
+	text-align: center;
+	padding-top: 20px;
+	font-size: 30px;
+}
+
+label {
+	font-size: 20px;
+}
+
+#results {
+	margin-left: 100px;
+}
+
+#gameWords {
+	font-size: 30px;
+	padding-top: 10px;
+}
 
