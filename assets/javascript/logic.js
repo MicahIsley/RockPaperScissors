@@ -26,7 +26,6 @@ $(".player1Button").on("click", function() {
 
 	database.ref().update({
 		p1Response: p1Response,
-		player1: true
 	})
 });	
 
@@ -36,9 +35,22 @@ $(".player2Button").on("click", function() {
 
 	database.ref().update({
 		p2Response: p2Response,
-		player2: true
 	})
 });	
+
+$("#ready1").on("click", function() {
+	database.ref().update({
+		player1: true
+	})
+	ready();
+})
+
+$("#ready2").on("click", function() {
+	database.ref().update({
+		player2: true
+	})
+	ready();
+})
 
 $("#player1").on("click", function() {
 	//console.log("player1");
@@ -94,11 +106,9 @@ function determineWinner(){
 	} else{}	
 }	
 
-function ready(){
 	database.ref().on("value", function(snapshot) {
 		player1 = snapshot.val().player1;
 		player2 = snapshot.val().player2;
-	})
 	if(player1=== true && player2===true){
 		//console.log(player1);
 		//console.log(player2);
@@ -117,7 +127,7 @@ function ready(){
 			$("#tie").hide();
 		}, 2000);
 	} else{}
-}
+	})
 //display results to players
 
 //chat box
