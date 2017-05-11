@@ -25,10 +25,9 @@ $(".player1Button").on("click", function() {
 	p1Response = this.id;
 
 	database.ref().update({
-		p1Response: p1Response
+		p1Response: p1Response,
+		player1: true
 	})
-	player1 = true;
-
 });	
 
 $(".player2Button").on("click", function() {
@@ -36,10 +35,9 @@ $(".player2Button").on("click", function() {
 	p2Response = this.id;
 
 	database.ref().update({
-		p2Response: p2Response
+		p2Response: p2Response,
+		player2: true
 	})
-	player2 = true;
-
 });	
 
 $("#player1").on("click", function() {
@@ -97,6 +95,10 @@ function determineWinner(){
 }	
 
 function ready(){
+	database.ref().on("value", function(snapshot) {
+		player1 = snapshot.val().player1;
+		player2 = snapshot.val().player2;
+	})
 	if(player1=== true && player2===true){
 		//console.log(player1);
 		//console.log(player2);
@@ -104,8 +106,10 @@ function ready(){
 		determineWinner();
 		displayStats();
 		setTimeout(function(){
-			player1 = false;
-			player2 = false;
+			database.ref().update({
+				player1: false,
+				player2: false
+			})	
 		}, 50);
 		setTimeout(function(){
 			$("#p1Victory").hide();
